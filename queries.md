@@ -55,5 +55,34 @@ SELECt * FROM movies
 WHERE name LIKE 'The %';
 ```
 
-## 
+## IS NULL/IS NOT NULL
+
+```text
+SELECT name FROM movies
+WHERE imdb_rating IS NOT NULL;
+```
+
+## BETWEEN
+
+* `BETWEEN` two letters _is not_ inclusive of the 2nd letter.
+* `BETWEEN` two numbers _is_ inclusive of the 2nd number.
+
+```text
+SELECT * FROM movies
+WHERE name BETWEEN 'D' AND 'G';
+```
+
+## AND
+
+```text
+SELECT * FROM movies
+WHERE year BETWEEN 1990 AND 1999 AND genre='romance';
+```
+
+## OR
+
+```text
+SELECT * FROM movies
+WHERE year >2014 OR genre='action';
+```
 
