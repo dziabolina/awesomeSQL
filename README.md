@@ -1,4 +1,4 @@
-# Basics
+# basics
 
 ## data types
 

@@ -1,5 +1,6 @@
 # Table of contents
 
-* [Basics](README.md)
+* [basics](README.md)
 * [statements](statements.md)
+* [queries](queries.md)
 
