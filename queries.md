@@ -7,6 +7,18 @@ description: >-
 
 # queries
 
+## 
+
+* `SELECT` is the clause we use every time we want to query information from a database.
+* `AS` renames a column or table.
+* `DISTINCT` return unique values.
+* `WHERE` is a popular command that lets you filter the results of the query based on conditions that you specify.
+* `LIKE` and `BETWEEN` are special operators.
+* `AND` and `OR` combines multiple conditions.
+* `ORDER BY` sorts the result.
+* `LIMIT` specifies the maximum number of rows that the query will return.
+* `CASE` creates different outputs.
+
 ## SELECT
 
  Let's only select the `name` and `genre`columns of the table.
@@ -84,5 +96,38 @@ WHERE year BETWEEN 1990 AND 1999 AND genre='romance';
 ```text
 SELECT * FROM movies
 WHERE year >2014 OR genre='action';
+```
+
+## ORDER BY
+
+* `DESC` is a keyword used in `ORDER BY` to sort the results in _descending order_ \(high to low or Z-A\).
+* `ASC` is a keyword used in `ORDER BY` to sort the results in _ascending_ order \(low to high or A-Z\).
+
+```text
+SELECT * FROM movies 
+WHERE imdb_rating >8
+ORDER BY year DESC;
+```
+
+## LIMIT
+
+```text
+SELECT*FROM movies
+ORDER BY imdb_rating DESC
+LIMIT 3;
+```
+
+## CASE
+
+ A `CASE` statement allows us to create different outputs \(usually in the `SELECT` statement\). It is SQL's way of handling [if-then](https://en.wikipedia.org/wiki/Conditional_%28computer_programming%29) logic.
+
+```text
+SELECT name,
+CASE
+WHEN imdb_rating >8 THEN 'Fantastic'
+WHEN imdb_rating <6 THEN 'Poorly Received'
+ELSE 'Avoid at All Costs'
+END AS 'Review'
+FROM movies;
 ```
 
