@@ -4,4 +4,5 @@
 * [statements](statements.md)
 * [queries](queries.md)
 * [aggregate funcions](aggregate-funcions.md)
+* [multiple tables](multiple-tables.md)
 
