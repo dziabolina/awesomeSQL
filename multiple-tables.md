@@ -50,6 +50,49 @@ ON newspaper.id=online.id
 WHERE online.id IS NULL;
 ```
 
+## CROSS JOIN
+
+```text
+SELECT *
+FROM newspaper
+CROSS JOIN months
+WHERE start_month <= month
+AND end_month >= month;
+```
+
+```text
+SELECT month,
+COUNT(*) AS 'subscribers'
+FROM newspaper
+CROSS JOIN months
+WHERE start_month <= month
+AND end_month >= month
+GROUP BY month;
+```
+
+## UNION
+
+ Sometimes we just want to stack one dataset on top of the other. Well, the `UNION` operator allows us to do that.
+
+SQL has strict rules for appending data:
+
+* Tables must have the same number of columns.
+* The columns must have the same data types in the same order as the first table.
+
+```text
+SELECT*
+FROM newspaper
+UNION
+SELECT *
+FROM online;
+```
+
+
+
+
+
+
+
 
 
 
