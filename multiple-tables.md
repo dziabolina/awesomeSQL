@@ -87,7 +87,9 @@ SELECT *
 FROM online;
 ```
 
+## WITH
 
+ Often times, we want to combine two tables, but one of the tables is the result of another calculation.
 
 
 
