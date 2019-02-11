@@ -96,13 +96,36 @@ GROUP BY 1,2;
 
 ## HAVING
 
+ In addition to being able to group data using `GROUP BY`, SQL also allows you to filter which groups to include and which to exclude.
 
+We can't use `WHERE` here because we don't want to filter the rows; we want to _filter groups_.
 
+`HAVING` is very similar to `WHERE`. In fact, all types of `WHERE` clauses you learned about thus far can be used with `HAVING`.
 
+```text
+SELECT price,
+	ROUND(AVG(downloads)),
+  COUNT(*)
+FROM fake_apps
+GROUP BY 1
+HAVING COUNT(price)>10;
+```
 
+* When we want to limit the results of a query based on values of the individual rows, use `WHERE`.
+* When we want to limit the results of a query based on an aggregate property, use `HAVING`.
 
+`HAVING` statement always comes after `GROUP BY`, but before `ORDER BY` and `LIMIT`.
 
-
+```text
+SELECT category,
+	ROUND(AVG(downloads)),
+  COUNT(*) AS 'ser'
+FROM fake_apps
+GROUP BY 1
+HAVING COUNT(category)<15
+ORDER BY 3 DESC
+LIMIT 10;
+```
 
 
 
