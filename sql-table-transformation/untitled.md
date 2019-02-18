@@ -1,6 +1,8 @@
 # Non-Correlated Subqueries
 
-## Query inside query
+## IN - Query inside query
+
+ A **non-correlated subquery** is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation.
 
 ```text
 SELECT * FROM flights
