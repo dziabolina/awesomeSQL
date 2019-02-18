@@ -1,4 +1,4 @@
-# basics
+# SQL basics
 
 ## data types
 
