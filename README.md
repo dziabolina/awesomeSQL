@@ -7,6 +7,10 @@
 * DATE, the date formatted as YYYY-MM-DD for the year, month, and day
 * REAL, a decimal value
 
+More to this topic: 
+
+[https://www.journaldev.com/16774/sql-data-types](https://www.journaldev.com/16774/sql-data-types)
+
 ## comparison operators
 
 Comparison operators used with the WHERE clause are:
